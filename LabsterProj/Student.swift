@@ -18,7 +18,11 @@ struct LoginInformation {
     var password: String
 }
 
-class Student {
+protocol StorableInDatabase {
+    func getInformationMap() -> [String: Any]
+}
+
+class Student: StorableInDatabase {
     
     // general info
     let firstName: String
@@ -37,6 +41,21 @@ class Student {
         self.yearOfStudy = yearOfStudy
         self.loginInfo = loginInfo
         self.faculty = faculty
+    }
+    
+    func getInformationMap() -> [String : Any] {
+        
+        let resultInformationMap: [String: Any] = [
+            "firstName": firstName,
+            "lastName": lastName,
+            "yearOfStudy": yearOfStudy,
+            "email": loginInfo.email,
+            "password": loginInfo.password,
+            "facultyName": faculty.facultyName,
+            "facultySection": faculty.facultySection
+        ]
+        
+        return resultInformationMap
     }
     
 }
@@ -102,6 +121,8 @@ class StudentCollection {
 }
 
 
+// current student
+var currentLoggedInStudent: Student? = nil
 
 
 

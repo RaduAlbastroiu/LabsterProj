@@ -10,33 +10,30 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
+// static class
 class DatabaseInterface {
     
-    let rootRef: DatabaseReference
-    
-    init() {
-        rootRef = Database.database().reference()
-    }
-}
-
-class DataManipulator {
-    
     /// Sign in Proces
-    func setStudentInfo(student: Student) {
-        // FIXME: implement sign in
+    static func signUpStudent(student: Student) {
+        // root database
+        let databaseRef = Database.database().reference()
+        
+        // format to write in database
+        let studentInfoMap = student.getInformationMap()
+        
+        databaseRef.child("StudentCollection").childByAutoId().setValue(studentInfoMap)
+        
+        currentLoggedInStudent = student
     }
     
     /// Log in Process
-    func logInStudent(loginInfo: LoginInformation) -> Bool {
+    static func logInStudent(loginInfo: LoginInformation) -> Bool {
         // FiXME: implement log in
-        
-        let ref = Database.database().reference()
-        
         return true
     }
     
     /// Get all Students
-    func getStudentFromDatabase() -> StudentCollection {
+    static func getStudentFromDatabase() -> StudentCollection {
         
         // FIXME: populateCollection
         let studentCollection: [Student] = Array()
@@ -47,4 +44,6 @@ class DataManipulator {
         
     }
 }
+
+
 
