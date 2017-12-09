@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -117,10 +117,45 @@
             </objects>
             <point key="canvasLocation" x="136.71875" y="132.421875"/>
         </scene>
-        <!--View Controller-->
+        <!--Test View Controller-->
+        <scene sceneID="A9s-yI-dIC">
+            <objects>
+                <viewController id="ydO-LG-BKh" customClass="TestViewController" customModule="LabsterProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F06-jV-d01">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-sx-eKA">
+                                <rect key="frame" x="139" y="391" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEf-97-ZiH">
+                                <rect key="frame" x="164" y="458" width="46" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushButton:" destination="ydO-LG-BKh" eventType="touchUpInside" id="Yip-KO-LAm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lLG-Qt-8Wa"/>
+                    </view>
+                    <connections>
+                        <outlet property="testTextField" destination="gvR-sx-eKA" id="ApB-5n-eQT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Es-qo-AOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="851.97044334975374"/>
+        </scene>
+        <!--Sign Up View Controller-->
         <scene sceneID="FQl-fs-2wO">
             <objects>
-                <viewController id="Gne-sa-8eU" sceneMemberID="viewController">
+                <viewController id="Gne-sa-8eU" customClass="SignUpViewController" customModule="LabsterProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="keJ-aV-SSQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -435,6 +470,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="0.0078431372550000003" green="0.75294117650000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitSignUpInfo:" destination="Gne-sa-8eU" eventType="touchUpInside" id="BuE-Jg-VOO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -447,6 +485,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S5Y-Zf-sTW"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="eq5-9S-1dy" id="KR6-8P-L7A"/>
+                        <outlet property="facultyNameTextField" destination="6ZO-E4-icj" id="0ZQ-fm-LaV"/>
+                        <outlet property="facultySectionTextField" destination="da4-Xt-fcI" id="POK-5H-fPH"/>
+                        <outlet property="facultyYearOfStudyTextField" destination="BZc-zO-qyg" id="6tn-Z1-dtl"/>
+                        <outlet property="firstNameTextField" destination="tYD-yg-R27" id="qaO-dp-lOS"/>
+                        <outlet property="lastNameTextField" destination="XCv-Co-q2i" id="YtY-Ma-zfm"/>
+                        <outlet property="passwordTextField" destination="pn4-S9-cgY" id="xNl-0Z-Ef8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kac-cB-zpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@
 		8331617F1FDC6FFE0048ED24 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331617E1FDC6FFE0048ED24 /* Lecture.swift */; };
 		833161811FDC701E0048ED24 /* DatabaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833161801FDC701E0048ED24 /* DatabaseInterface.swift */; };
 		83BEB0611FDC9D040059E588 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEB0601FDC9D040059E588 /* SignUpViewController.swift */; };
+		83BEB0631FDCA80B0059E588 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEB0621FDCA80B0059E588 /* TestViewController.swift */; };
 		B634E7EA0175F6F62805B351 /* libPods-LabsterProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 660B5F4C11309617805F05EE /* libPods-LabsterProj.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		8331617E1FDC6FFE0048ED24 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		833161801FDC701E0048ED24 /* DatabaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInterface.swift; sourceTree = "<group>"; };
 		83BEB0601FDC9D040059E588 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		83BEB0621FDCA80B0059E588 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		8FAF63DD4DF301C4D7D63C53 /* Pods-LabsterProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabsterProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-LabsterProj/Pods-LabsterProj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				8331617E1FDC6FFE0048ED24 /* Lecture.swift */,
 				833161801FDC701E0048ED24 /* DatabaseInterface.swift */,
 				83BEB0601FDC9D040059E588 /* SignUpViewController.swift */,
+				83BEB0621FDCA80B0059E588 /* TestViewController.swift */,
 				8331616C1FDC6BF80048ED24 /* Main.storyboard */,
 				8331616F1FDC6BF80048ED24 /* Assets.xcassets */,
 				833161711FDC6BF80048ED24 /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83BEB0631FDCA80B0059E588 /* TestViewController.swift in Sources */,
 				83BEB0611FDC9D040059E588 /* SignUpViewController.swift in Sources */,
 				8331617F1FDC6FFE0048ED24 /* Lecture.swift in Sources */,
 				8331616B1FDC6BF80048ED24 /* ViewController.swift in Sources */,

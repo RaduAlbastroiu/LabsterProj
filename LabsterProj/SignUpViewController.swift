@@ -13,7 +13,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextFeild: UITextView!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var facultyNameTextField: UITextField!
     @IBOutlet weak var facultyYearOfStudyTextField: UITextField!
     @IBOutlet weak var facultySectionTextField: UITextField!
@@ -30,11 +30,11 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func submitSignUpInformation(_ sender: Any) {
+    @IBAction func submitSignUpInfo(_ sender: Any) {
         if let email: String = emailTextField.text,
             let password: String = passwordTextField.text,
             let firstName: String = firstNameTextField.text,
-            let lastName: String = lastNameTextFeild.text,
+            let lastName: String = lastNameTextField.text,
             let facultyName: String = facultyNameTextField.text,
             let facultyYearString: String = facultyYearOfStudyTextField.text,
             let facultyYear: Int = Int(facultyYearString),
