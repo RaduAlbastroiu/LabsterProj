@@ -13,6 +13,9 @@
 		833161701FDC6BF80048ED24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8331616F1FDC6BF80048ED24 /* Assets.xcassets */; };
 		833161731FDC6BF80048ED24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833161711FDC6BF80048ED24 /* LaunchScreen.storyboard */; };
 		8331617B1FDC6CC90048ED24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8331617A1FDC6CC90048ED24 /* GoogleService-Info.plist */; };
+		8331617D1FDC6FEF0048ED24 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331617C1FDC6FEF0048ED24 /* Student.swift */; };
+		8331617F1FDC6FFE0048ED24 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331617E1FDC6FFE0048ED24 /* Lecture.swift */; };
+		833161811FDC701E0048ED24 /* DatabaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833161801FDC701E0048ED24 /* DatabaseInterface.swift */; };
 		B634E7EA0175F6F62805B351 /* libPods-LabsterProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 660B5F4C11309617805F05EE /* libPods-LabsterProj.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		833161721FDC6BF80048ED24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		833161741FDC6BF80048ED24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8331617A1FDC6CC90048ED24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8331617C1FDC6FEF0048ED24 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		8331617E1FDC6FFE0048ED24 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		833161801FDC701E0048ED24 /* DatabaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInterface.swift; sourceTree = "<group>"; };
 		8FAF63DD4DF301C4D7D63C53 /* Pods-LabsterProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabsterProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-LabsterProj/Pods-LabsterProj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +79,9 @@
 			children = (
 				833161681FDC6BF80048ED24 /* AppDelegate.swift */,
 				8331616A1FDC6BF80048ED24 /* ViewController.swift */,
+				8331617C1FDC6FEF0048ED24 /* Student.swift */,
+				8331617E1FDC6FFE0048ED24 /* Lecture.swift */,
+				833161801FDC701E0048ED24 /* DatabaseInterface.swift */,
 				8331616C1FDC6BF80048ED24 /* Main.storyboard */,
 				8331616F1FDC6BF80048ED24 /* Assets.xcassets */,
 				833161711FDC6BF80048ED24 /* LaunchScreen.storyboard */,
@@ -218,8 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8331617F1FDC6FFE0048ED24 /* Lecture.swift in Sources */,
 				8331616B1FDC6BF80048ED24 /* ViewController.swift in Sources */,
+				8331617D1FDC6FEF0048ED24 /* Student.swift in Sources */,
 				833161691FDC6BF80048ED24 /* AppDelegate.swift in Sources */,
+				833161811FDC701E0048ED24 /* DatabaseInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
