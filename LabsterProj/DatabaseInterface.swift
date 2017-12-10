@@ -42,17 +42,13 @@ class DatabaseInterface {
         self.isCorrectSignin = false
         let databaseRef = Database.database().reference().child("StudentCollection")
         
-        databaseRef.queryOrderedByKey().observe(.childAdded, with: {
-            snapshot in
-            
-            let value = snapshot.value as! [String: AnyObject]
-            let email = value["email"] as! String
-            let password = value["password"] as! String
-            
-            if email == loginInfo.email && password == loginInfo.password {
+        // FIXME: hacked, maybe Dispatch queue asyncronized
+        for loginInfoOne in loginInfoCollection {
+            if loginInfoOne.email == loginInfo.email &&
+                loginInfoOne.password == loginInfo.password {
                 self.isCorrectSignin = true
             }
-        })
+        }
         
         return self.isCorrectSignin == true
     }

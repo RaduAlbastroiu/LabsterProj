@@ -1,4 +1,4 @@
-//
+///
 //  AppDelegate.swift
 //  LabsterProj
 //
@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+
+var loginInfoCollection: [LoginInformation] = []
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+        let databaseRef = Database.database().reference().child("StudentCollection")
+        
+        databaseRef.queryOrderedByKey().observe(.childAdded, with: {
+            snapshot in
+            
+            let value = snapshot.value as! [String: AnyObject]
+            let email = value["email"] as! String
+            let password = value["password"] as! String
+            
+            loginInfoCollection.append(LoginInformation(email: email, password: password))
+        })
         
         return true
     }
