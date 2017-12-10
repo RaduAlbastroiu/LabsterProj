@@ -54,7 +54,11 @@ class SignUpViewController: UIViewController {
             // FIXME: show allert for invalid data
             print("\n Failed to SignUP")
         }
- 
+    }
+    
+    // retract keyboard end editing
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     /*

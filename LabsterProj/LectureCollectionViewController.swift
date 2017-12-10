@@ -22,6 +22,10 @@ class LectureCollectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // retract keyboard end editing
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation
