@@ -13,12 +13,18 @@ import FirebaseDatabase
 // static class
 class DatabaseInterface {
     
-    static func setCurrentStudent(student: Student) {
+    var isCorrectSignin: Bool
+    
+    init() {
+        isCorrectSignin = false
+    }
+    
+    func setCurrentStudent(student: Student) {
         currentLoggedInStudent = student
     }
     
     /// Sign in Proces
-    static func signUpStudent(student: Student) {
+    func signUpStudent(student: Student) {
         // root database
         let databaseRef = Database.database().reference()
         
@@ -31,13 +37,30 @@ class DatabaseInterface {
     }
     
     /// Log in Process
-    static func logInStudent(loginInfo: LoginInformation) -> Bool {
-        // FiXME: implement log in
-        return true
+    func logInStudent(loginInfo: LoginInformation) {
+        
+        self.isCorrectSignin = false
+        let databaseRef = Database.database().reference().child("StudentCollection")
+        
+        databaseRef.queryOrderedByKey().observe(.childAdded, with: {
+            snapshot in
+            
+            let value = snapshot.value as! [String: AnyObject]
+            let email = value["email"] as! String
+            let password = value["password"] as! String
+            
+            if email == loginInfo.email && password == loginInfo.password {
+                self.isCorrectSignin = true
+            }
+        })
+        
+        if self.isCorrectSignin == true {
+            
+        }
     }
     
     /// Get all Students
-    static func getStudentFromDatabase() -> StudentCollection {
+    func getStudentFromDatabase() -> StudentCollection {
         
         // FIXME: populateCollection
         let studentCollection: [Student] = Array()
@@ -49,5 +72,5 @@ class DatabaseInterface {
     }
 }
 
-
+var databaseInterface = DatabaseInterface()
 

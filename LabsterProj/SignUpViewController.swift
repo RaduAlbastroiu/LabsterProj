@@ -43,7 +43,7 @@ class SignUpViewController: UIViewController {
             
             let aStudent = Student(firstName: firstName, lastName: lastName, yearOfStudy: facultyYear, loginInfo: LoginInformation(email: email, password: password), faculty: FacultyInformation(facultyName: facultyName, facultySection: facultySection))
             
-            DatabaseInterface.signUpStudent(student: aStudent)
+            databaseInterface.signUpStudent(student: aStudent)
             
             print("\n Succesfully created new user with email \(email) and \(password)")
             
