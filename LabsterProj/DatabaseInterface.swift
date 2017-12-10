@@ -13,6 +13,10 @@ import FirebaseDatabase
 // static class
 class DatabaseInterface {
     
+    static func setCurrentStudent(student: Student) {
+        currentLoggedInStudent = student
+    }
+    
     /// Sign in Proces
     static func signUpStudent(student: Student) {
         // root database
@@ -23,7 +27,7 @@ class DatabaseInterface {
         
         databaseRef.child("StudentCollection").childByAutoId().setValue(studentInfoMap)
         
-        currentLoggedInStudent = student
+        setCurrentStudent(student: student)
     }
     
     /// Log in Process

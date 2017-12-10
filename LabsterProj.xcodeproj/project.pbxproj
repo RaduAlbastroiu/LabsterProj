@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		833161691FDC6BF80048ED24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833161681FDC6BF80048ED24 /* AppDelegate.swift */; };
-		8331616B1FDC6BF80048ED24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331616A1FDC6BF80048ED24 /* ViewController.swift */; };
 		8331616E1FDC6BF80048ED24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8331616C1FDC6BF80048ED24 /* Main.storyboard */; };
 		833161701FDC6BF80048ED24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8331616F1FDC6BF80048ED24 /* Assets.xcassets */; };
 		833161731FDC6BF80048ED24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833161711FDC6BF80048ED24 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,7 @@
 		83BEB0611FDC9D040059E588 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEB0601FDC9D040059E588 /* SignUpViewController.swift */; };
 		83BEB0631FDCA80B0059E588 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEB0621FDCA80B0059E588 /* TestViewController.swift */; };
 		83BEB0651FDCAF3B0059E588 /* LectureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEB0641FDCAF3B0059E588 /* LectureCollectionViewController.swift */; };
+		83BEB0671FDCC3CC0059E588 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BEB0661FDCC3CC0059E588 /* LogInViewController.swift */; };
 		B634E7EA0175F6F62805B351 /* libPods-LabsterProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 660B5F4C11309617805F05EE /* libPods-LabsterProj.a */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,6 @@
 		733CCC093F06BDBCD9F233A2 /* Pods-LabsterProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabsterProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LabsterProj/Pods-LabsterProj.debug.xcconfig"; sourceTree = "<group>"; };
 		833161651FDC6BF80048ED24 /* LabsterProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabsterProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		833161681FDC6BF80048ED24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8331616A1FDC6BF80048ED24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8331616D1FDC6BF80048ED24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8331616F1FDC6BF80048ED24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		833161721FDC6BF80048ED24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		83BEB0601FDC9D040059E588 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		83BEB0621FDCA80B0059E588 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		83BEB0641FDCAF3B0059E588 /* LectureCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureCollectionViewController.swift; sourceTree = "<group>"; };
+		83BEB0661FDCC3CC0059E588 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = /Users/ducu/Documents/MyProjects/LabsterProj/LabsterProj/LabsterProj/LogInViewController.swift; sourceTree = "<absolute>"; };
 		8FAF63DD4DF301C4D7D63C53 /* Pods-LabsterProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabsterProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-LabsterProj/Pods-LabsterProj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,13 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				833161681FDC6BF80048ED24 /* AppDelegate.swift */,
-				8331616A1FDC6BF80048ED24 /* ViewController.swift */,
 				8331617C1FDC6FEF0048ED24 /* Student.swift */,
 				8331617E1FDC6FFE0048ED24 /* Lecture.swift */,
 				833161801FDC701E0048ED24 /* DatabaseInterface.swift */,
 				83BEB0601FDC9D040059E588 /* SignUpViewController.swift */,
-				83BEB0621FDCA80B0059E588 /* TestViewController.swift */,
+				83BEB0661FDCC3CC0059E588 /* LogInViewController.swift */,
 				83BEB0641FDCAF3B0059E588 /* LectureCollectionViewController.swift */,
+				83BEB0621FDCA80B0059E588 /* TestViewController.swift */,
 				8331616C1FDC6BF80048ED24 /* Main.storyboard */,
 				8331616F1FDC6BF80048ED24 /* Assets.xcassets */,
 				833161711FDC6BF80048ED24 /* LaunchScreen.storyboard */,
@@ -239,8 +239,8 @@
 				83BEB0631FDCA80B0059E588 /* TestViewController.swift in Sources */,
 				83BEB0611FDC9D040059E588 /* SignUpViewController.swift in Sources */,
 				8331617F1FDC6FFE0048ED24 /* Lecture.swift in Sources */,
-				8331616B1FDC6BF80048ED24 /* ViewController.swift in Sources */,
 				8331617D1FDC6FEF0048ED24 /* Student.swift in Sources */,
+				83BEB0671FDCC3CC0059E588 /* LogInViewController.swift in Sources */,
 				833161691FDC6BF80048ED24 /* AppDelegate.swift in Sources */,
 				833161811FDC701E0048ED24 /* DatabaseInterface.swift in Sources */,
 				83BEB0651FDCAF3B0059E588 /* LectureCollectionViewController.swift in Sources */,

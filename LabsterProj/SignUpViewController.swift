@@ -45,15 +45,14 @@ class SignUpViewController: UIViewController {
             
             DatabaseInterface.signUpStudent(student: aStudent)
             
-            print(email)
-            print(password)
+            print("\n Succesfully created new user with email \(email) and \(password)")
             
             // jump to lecture collection view
             self.performSegue(withIdentifier: "SignUpToLectureCollection", sender: self)
             
         } else {
             // FIXME: show allert for invalid data
-            print("\n invalid data\n")
+            print("\n Failed to SignUP")
         }
  
     }

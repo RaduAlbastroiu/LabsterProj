@@ -12,10 +12,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LabsterProj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="LabsterProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,6 +64,9 @@
                                     <color key="titleColor" red="0.0078431372549019607" green="0.75294117647058822" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.16862745100000001" green="0.1960784314" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="requestLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdE-sQ-j1j"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-BS-4y9">
                                 <rect key="frame" x="67.666666666666686" y="722" width="240" height="36"/>
@@ -112,6 +115,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="fCx-5z-OjZ" id="7zi-HK-9jD"/>
+                        <outlet property="passwordTextField" destination="V1E-k0-EeT" id="heP-85-YC0"/>
+                        <segue destination="DCw-wD-jet" kind="show" identifier="LoginToLectureCollection" id="HCp-F2-CHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1524,4 +1532,7 @@
             <point key="canvasLocation" x="5881" y="954"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HCp-F2-CHi"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/ducu/Documents/MyProjects/LabsterProj/LabsterProj/LabsterProj/LogInViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:LabsterProj.xcodeproj">
    </FileRef>
    <FileRef
