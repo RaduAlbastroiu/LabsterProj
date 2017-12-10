@@ -31,6 +31,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func submitSignUpInfo(_ sender: Any) {
+        
         if let email: String = emailTextField.text,
             let password: String = passwordTextField.text,
             let firstName: String = firstNameTextField.text,
@@ -40,18 +41,21 @@ class SignUpViewController: UIViewController {
             let facultyYear: Int = Int(facultyYearString),
             let facultySection: String = facultySectionTextField.text {
             
-            // creating a temporary student and send it to database
-            DatabaseInterface.signUpStudent(student: Student(firstName: firstName, lastName: lastName, yearOfStudy: facultyYear, loginInfo: LoginInformation(email: email, password: password), faculty: FacultyInformation(facultyName: facultyName, facultySection: facultySection)))
+            let aStudent = Student(firstName: firstName, lastName: lastName, yearOfStudy: facultyYear, loginInfo: LoginInformation(email: email, password: password), faculty: FacultyInformation(facultyName: facultyName, facultySection: facultySection))
+            
+            DatabaseInterface.signUpStudent(student: aStudent)
             
             print(email)
             print(password)
             
-            // FIXME: jump to lectures view
+            // jump to lecture collection view
+            self.performSegue(withIdentifier: "SignUpToLectureCollection", sender: self)
             
         } else {
             // FIXME: show allert for invalid data
             print("\n invalid data\n")
         }
+ 
     }
     
     /*

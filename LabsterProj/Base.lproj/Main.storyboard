@@ -493,6 +493,7 @@
                         <outlet property="firstNameTextField" destination="tYD-yg-R27" id="qaO-dp-lOS"/>
                         <outlet property="lastNameTextField" destination="XCv-Co-q2i" id="YtY-Ma-zfm"/>
                         <outlet property="passwordTextField" destination="pn4-S9-cgY" id="xNl-0Z-Ef8"/>
+                        <segue destination="DCw-wD-jet" kind="show" identifier="SignUpToLectureCollection" id="hcu-VJ-gnE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kac-cB-zpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -646,10 +647,10 @@
             </objects>
             <point key="canvasLocation" x="3324" y="-579"/>
         </scene>
-        <!--View Controller-->
+        <!--Lecture Collection View Controller-->
         <scene sceneID="xRF-sN-N6g">
             <objects>
-                <viewController id="DCw-wD-jet" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LectureCollectionViewController" id="DCw-wD-jet" customClass="LectureCollectionViewController" customModule="LabsterProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NQ-2c-0f0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
