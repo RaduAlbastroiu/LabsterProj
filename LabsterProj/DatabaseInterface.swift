@@ -37,7 +37,7 @@ class DatabaseInterface {
     }
     
     /// Log in Process
-    func logInStudent(loginInfo: LoginInformation) {
+    func logInStudent(loginInfo: LoginInformation) -> Bool {
         
         self.isCorrectSignin = false
         let databaseRef = Database.database().reference().child("StudentCollection")
@@ -54,9 +54,7 @@ class DatabaseInterface {
             }
         })
         
-        if self.isCorrectSignin == true {
-            
-        }
+        return self.isCorrectSignin == true
     }
     
     /// Get all Students

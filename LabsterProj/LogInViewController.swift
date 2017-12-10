@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController, kk {
+class LogInViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,7 +29,13 @@ class LogInViewController: UIViewController, kk {
             
             let loginInfo = LoginInformation(email: email, password: password)
             
-            databaseInterface.logInStudent(loginInfo: loginInfo)
+            if databaseInterface.logInStudent(loginInfo: loginInfo) == true {
+                
+                // Jump to lecture collection view
+                self.performSegue(withIdentifier: "LoginToLectureCollection", sender: self)
+            } else {
+                // FIXME: Wrong username or password
+            }
             
         } else {
             // FIXME: Invalid data
